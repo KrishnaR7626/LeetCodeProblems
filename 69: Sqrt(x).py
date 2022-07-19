@@ -5,16 +5,10 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
+        if x == 0 or x == 1:
+            return x
         i = 1
-        if x == 0:
-            return 0
-        if x == 1:
-            return i
         while i < x:
-            if (i+1) * (i+1) > x:
+            if ((i+1) * (i+1) > x) or (i * i == x):
                 return i 
-            if i * i == x:
-                return i
-            else:
-                i+=1
-                
+            i+=1
